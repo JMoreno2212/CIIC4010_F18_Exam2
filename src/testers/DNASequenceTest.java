@@ -1,3 +1,4 @@
+package testers;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
@@ -9,17 +10,12 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
+import classes.DNASequence;
+
 public class DNASequenceTest {
 
-	DNASequence DNASequenceL5;
-	DNASequence DNASequenceL5R;
-	DNASequence DNASequenceL10;
-	DNASequence DNASequenceL15;
-	DNASequence DNASequenceL20;
-	DNASequence DNASequence5;
-	DNASequence DNASequence6;
-	DNASequence DNASequence7;
-	DNASequence DNASequence8;
+	DNASequence DNASequenceL5, DNASequenceL5R, DNASequenceL10, DNASequenceL15, DNASequenceL20, DNASequence5,
+		DNASequence6, DNASequence7, DNASequence8;
 
 	@SuppressWarnings("rawtypes")
 	ArrayList empty, onlyOne, allSame, contained1, contained2, contained3, contained4, contained5, notContained;

@@ -1,3 +1,4 @@
+package classes;
 import java.util.ArrayList;
 
 public class DNASequence {
@@ -90,14 +91,8 @@ public class DNASequence {
 	 */
 	
 	public static DNASequence longestSequence(ArrayList<DNASequence> sequences) {
-		if(sequences.isEmpty()) {return null;}
-		DNASequence result = sequences.get(0);
-		for(int i = 1; i < sequences.size(); i++) {
-			if(sequences.get(i).getSequence().length() > result.getSequence().length()) {
-				result = sequences.get(i);
-				}
-		}
-		return result;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 	
 	/*
@@ -108,11 +103,8 @@ public class DNASequence {
 	 * HINT: You may find the append method useful for this problem
 	 */
 	public static DNASequence concatenate(ArrayList<DNASequence> list) {
-		DNASequence result = new DNASequence("", "dna");
-		for(int i = 0; i < list.size(); i++) {
-			result.sequence = result.getSequence() + list.get(i).getSequence();
-		}
-		return result;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 	
 	
@@ -121,10 +113,8 @@ public class DNASequence {
 	 * Stops searching as soon as the target sequence if found.
 	 */
 	public boolean exists(ArrayList<DNASequence> list) {
-		for(int i = 0; i < list.size(); i++) {
-			if(this.getSequence() == list.get(i).getSequence()) {return true;}
-		}
-		return false;
+		// YOUR CODE HERE
+		return false; // Dummy return
 	}
 	
 	/*
@@ -133,12 +123,8 @@ public class DNASequence {
 	 * Returns the modified list of DNASequence's
 	 */
 	public ArrayList<DNASequence> prepend(ArrayList<DNASequence> list) {
-		ArrayList<DNASequence> result = new ArrayList<DNASequence>();
-		result.add(this);
-		for(int i = 0; i < list.size(); i++){
-			result.add(list.get(i));
-		}
-		return result;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 	
 	/*
@@ -147,11 +133,7 @@ public class DNASequence {
 	 * HINT: Instance method contains could be useful
 	 */ 
 	public static boolean someCompletelyContained(ArrayList<DNASequence> list) {
-		for(int i = 0; i < list.size(); i++) {
-			for(int j = i + 1; j < list.size(); j++) {
-				if(list.get(i).contains(list.get(j)) || list.get(j).contains(list.get(i))) {return true;}
-			}
-		}
-		return false;
+		// YOUR CODE HERE
+		return false; // Dummy return
 	}
 } 

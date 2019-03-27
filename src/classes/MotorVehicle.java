@@ -1,15 +1,10 @@
-import java.util.ArrayList;
+package classes;
 
 public class MotorVehicle {
 	
-	private String make;
-	private String model;
-	private String licensePlate;
-	private int year;
-	private double mileage;
-	
-	private int warrantyYears;
-	private double warrantyMileage;
+	private String make, model, licensePlate;
+	private int year, warrantyYears;
+	private double mileage, warrantyMileage;
 	
 	/*
 	 * Constructs a new MotorVehicle with the given parameters
@@ -38,29 +33,13 @@ public class MotorVehicle {
 	}
 	
 	// Getters
-	public String getMake() {
-		return make;
-	}
-	public String getModel() {
-		return model;
-	}
-	public String getLicensePlate() {
-		return licensePlate;
-	}
-	public int getYear() {
-		return year;
-	}
-	public double getMileage() {
-		return mileage;
-	}
-	
-	public int getWarrantyYears() {
-		return warrantyYears;
-	}
-
-	public double getWarrantyMileage() {
-		return warrantyMileage;
-	}
+	public String getMake() {return make;}
+	public String getModel() {return model;}
+	public String getLicensePlate() {return licensePlate;}
+	public int getYear() {return year;}
+	public double getMileage() {return mileage;}	
+	public int getWarrantyYears() {return warrantyYears;}
+	public double getWarrantyMileage() {return warrantyMileage;}
 
 	// Instance methods
 	
@@ -93,14 +72,8 @@ public class MotorVehicle {
 	 * Returns the MotorVehicle with the least mileage in the given vehicles list 
 	 */
 	public static MotorVehicle findLeastMileage(MotorVehicle[] vehicles) {
-		if(vehicles.length == 0) {return null;}
-		MotorVehicle lessMiles = vehicles[0];
-		for(int i = 1; i < vehicles.length; i++) {
-			if(vehicles[i].getMileage() < lessMiles.getMileage()) {
-				lessMiles = vehicles[i];
-			}
-		}
-		return lessMiles;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 	
 	/*
@@ -109,25 +82,16 @@ public class MotorVehicle {
 	 * The original inventory should not be modified.
 	 */
 	public MotorVehicle[] filterByMakeModel(MotorVehicle[] inventory) {
-		ArrayList<MotorVehicle> filtered = new ArrayList<MotorVehicle>();
-		for(int i = 0; i < inventory.length; i++) {
-			if(inventory[i].getMake() == this.getMake() && inventory[i].getModel() == this.getModel()) {
-				filtered.add(inventory[i]);
-			}
-		}
-		return filtered.toArray(new MotorVehicle[0]);
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 	
 	/*
 	 * Returns true if and only if all cars have less mileage than the target car
 	 */
 	public boolean allHaveLessMileage(MotorVehicle[] inventory) {
-		if(inventory.length == 0) {return true;}
-		boolean allLess = true;
-		for(int i = 0; i < inventory.length; i++) {
-			if(inventory[i].getMileage() > this.getMileage()) {allLess = false;}
-		}
-		return allLess;
+		// YOUR CODE HERE
+		return false; // Dummy return
 	}
 	
 	/*
@@ -139,16 +103,7 @@ public class MotorVehicle {
 	 * inventory array.
 	 */
 	public MotorVehicle[] buy(MotorVehicle[] inventory) {
-		int count = 0;
-		boolean exists = false;
-		for(int i = 0; i < inventory.length; i++) {
-			if(inventory[i] instanceof MotorVehicle) {
-				count++;
-				if(inventory[i].equals(this)) exists = true;
-			}
-		}
-		if(count == inventory.length && exists == false) {return null;}
-		if(!exists) {inventory[count] = this;}
-		return inventory;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
 }

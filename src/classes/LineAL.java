@@ -1,11 +1,12 @@
+package classes;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
 public class LineAL {
-	
+
 	private double slope;
 	private double yIntercept;
-	
+
 	/*
 	 * Constructs a Line object with the givel slope and y intercept
 	 */
@@ -13,7 +14,7 @@ public class LineAL {
 		this.slope = slope;
 		this.yIntercept = yIntercept;
 	}
-	
+
 	/*
 	 * Constucts a Line object with the same properties as the parameter Line l
 	 */
@@ -21,7 +22,7 @@ public class LineAL {
 		this.slope = l.slope;
 		this.yIntercept = l.yIntercept;
 	}
-	
+
 	/*
 	 * Constructs a Line object that intersects both points p1 and p2
 	 * HiNT: slope is given by deltay / deltax, and yIntercept = y - slope * x
@@ -47,15 +48,15 @@ public class LineAL {
 	public void setYIntercept(double intercept) {
 		this.yIntercept = intercept;
 	}
-	
+
 	// Instance methods
-	
+
 	public boolean equals(Object o) {
 		if (!(o instanceof LineAL)) return false;
 		LineAL l = (LineAL) o;
 		return (l.getSlope() == this.getSlope()) && (l.getYIntercept() == this.getYIntercept());
 	}
-	
+
 	/*
 	 * Returns the xIntercept of the target Line
 	 * HINT: xIntercept = - yIntercept / slope
@@ -63,7 +64,7 @@ public class LineAL {
 	public double xIntercept() {
 		return (-yIntercept / slope);
 	}
-	
+
 	/*
 	 * Returns true iff the target Line is perpendicular to Line l2
 	 * HINT: Two lines are perpendicular if slope1 = - (1 / slope2)
@@ -81,17 +82,15 @@ public class LineAL {
 	public LineAL translate(double deltaX, double deltaY) {
 		return new LineAL(this.slope, this.yIntercept + deltaY - (slope * deltaX));
 	}
-	
+
 	/*
 	 * Returns true if and only if some Line from the given list have the same slope as the target Line
 	 */
 	public boolean hasWithSameSlope(ArrayList<LineAL> list) {
-		for(int i = 0; i < list.size(); i++) {
-			if(list.get(i).getSlope() == this.getSlope()) {return true;}
-		}
-		return false;
+		// YOUR CODE HERE
+		return false; // Dummy return
 	}
-	
+
 	/*
 	 * Adds the target Line at the end of the given list of Line's
 	 * if the Line is not already in the list.
@@ -100,39 +99,28 @@ public class LineAL {
 	 * Returns the unchanged or modified list
 	 */
 	public ArrayList<LineAL> addTo(ArrayList<LineAL> lines) {
-		boolean exists = false;
-		for(int i = 0; i < lines.size(); i++) {
-			if(this.getSlope() == lines.get(i).getSlope() && this.getYIntercept() == lines.get(i).getYIntercept()) {exists = true;}
-		}
-		if(!exists) {lines.add(this);}
-		return lines;
+		// YOUR CODE HERE
+		return null; // Dummy return
 	}
-	
+
 	/*
 	 * Returns true iff the given list of lines contains at least one
 	 * pair of lines that are parallel.
 	 * Remember that two lines are parallel if they have equal slopes
 	 */
 	public static boolean hasParellels(ArrayList<LineAL> lines) {
-		for(int i = 0; i < lines.size(); i++) {
-			for(int j = i + 1; j < lines.size(); j++) {
-				if(lines.get(i).getSlope() == lines.get(j).getSlope()) {return true;}
-			}
-		}
-		return false;
+		// YOUR CODE HERE
+		return false; // Dummy return
 	}
-	
+
 	/* 
 	 * Returns a new list of Line's containing all the Line's from the original
 	 * list that are not horizontal.
 	 * Remember that horizontal lines have slopes equal to zero.
 	 */
 	public static ArrayList<LineAL> notHorizontal(ArrayList<LineAL> lines) {
-		ArrayList<LineAL> result = new ArrayList<LineAL>();
-		for(int i = 0; i < lines.size(); i++) {
-			if(lines.get(i).getSlope() != 0) {result.add(lines.get(i));}
-		}
-		return result;
+		// YOUR CODE HERE
+		return null;
 	}
-	
+
 }
